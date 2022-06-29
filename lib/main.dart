@@ -32,7 +32,6 @@ void main() async {
   AwesomeNotifications().initialize(
       'resource://drawable/res_app_icon',
       [
-      
         NotificationChannel(
             channelGroupKey: 'category_tests',
             channelKey: 'call_channel',
@@ -44,35 +43,6 @@ void main() async {
             channelShowBadge: true,
             locked: true,
             defaultRingtoneType: DefaultRingtoneType.Ringtone),
-       
-        NotificationChannel(
-            channelGroupKey: 'layout_tests',
-            channelKey: 'inbox',
-            channelName: 'Inbox notifications',
-            channelDescription: 'Notifications with inbox layout',
-            defaultColor: Color(0xFF9D50DD),
-            ledColor: Color(0xFF9D50DD),
-            vibrationPattern: mediumVibrationPattern),
-        NotificationChannel(
-          channelGroupKey: 'schedule_tests',
-          channelKey: 'scheduled',
-          channelName: 'Scheduled notifications',
-          channelDescription: 'Notifications with schedule functionality',
-          defaultColor: Color(0xFF9D50DD),
-          ledColor: Color(0xFF9D50DD),
-          vibrationPattern: lowVibrationPattern,
-          importance: NotificationImportance.High,
-          defaultRingtoneType: DefaultRingtoneType.Alarm,
-          criticalAlerts: true,
-        ),
-      ],
-      channelGroups: [
-        NotificationChannelGroup(
-            channelGroupkey: 'basic_tests', channelGroupName: 'Basic tests'),
-        NotificationChannelGroup(
-            channelGroupkey: 'schedule_tests',
-            channelGroupName: 'Schedule tests'),
-     
       ],
       debug: true);
 

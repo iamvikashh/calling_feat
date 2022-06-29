@@ -79,10 +79,11 @@ class _HomePageState extends State<HomePage> {
 
 
     AwesomeNotifications().actionStream.listen((receivedAction) {
-
+     //channel name which we defined while creating the notification above.
       if(receivedAction.channelKey == 'call_channel'){
         switch (receivedAction.buttonKeyPressed) {
-
+         //plugin pass strings from android side.
+         // reject and accept when notification is shown in bar and user has clicked.
           case 'REJECT':
             AndroidForegroundService.stopForeground();
             break;
@@ -91,7 +92,7 @@ class _HomePageState extends State<HomePage> {
             loadSingletonPage(targetPage: PAGE_PHONE_CALL, receivedAction: receivedAction);
             AndroidForegroundService.stopForeground();
             break;
-
+          //This case will only trigger when app is killed and device is locked.
           default:
             loadSingletonPage(targetPage: PAGE_PHONE_CALL, receivedAction: receivedAction);
             break;
