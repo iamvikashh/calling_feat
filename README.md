@@ -1,6 +1,6 @@
 # awesome_notifications_example
 
-Demonstrates how to use the awesome_notifications plugin.
+Demonstrates how to use the awesome_notifications plugin and fcm for calling feature..
 
 ## Getting Started
 
